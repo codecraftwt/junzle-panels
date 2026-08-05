@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  
+  --bg-light: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.75);
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-hover: rgba(15, 23, 42, 0.16);
+  
+  --primary: #4f46e5;
+  --primary-hover: #4338ca;
+  --primary-light: rgba(79, 70, 229, 0.1);
+  
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+  
+  --error: #e11d48;
+  --error-bg: rgba(225, 29, 72, 0.04);
+  --error-border: rgba(225, 29, 72, 0.15);
+  
+  --success: #10b981;
+  --success-bg: rgba(16, 185, 129, 0.04);
+  --success-border: rgba(16, 185, 129, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.06) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.06) 0px, transparent 50%),
+    radial-gradient(at 50% 0%, rgba(168, 85, 247, 0.04) 0px, transparent 40%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+/* Beautiful Soft Pastel Glowing Blobs */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  top: 10%;
+  left: 5%;
+  background: rgba(99, 102, 241, 0.08);
+}
+
+body::after {
+  bottom: 10%;
+  right: 5%;
+  background: rgba(168, 85, 247, 0.06);
+}
+
+.page {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-wide {
+  max-width: 1400px;
+}
+
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.02);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+  box-shadow: 0 20px 50px rgba(99, 102, 241, 0.06);
+}
+
+h1 {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #475569 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Specific text gradient for the Junzle brand styling */
+.brand-gradient {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.field {
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.field label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 13.5px;
+  color: #334155;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+.field .optional {
+  font-weight: 400;
+  color: #94a3b8;
+  font-size: 11.5px;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 15px;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.field input:hover,
+.field textarea:hover {
+  border-color: var(--border-hover);
+  background: #ffffff;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.field input.invalid,
+.field textarea.invalid {
+  border-color: var(--error);
+  background: rgba(225, 29, 72, 0.01);
+}
+
+.field input.invalid:focus,
+.field textarea.invalid:focus {
+  box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.1);
+}
+
+.field .error {
+  color: var(--error);
+  font-size: 12.5px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+}
+
+.btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  background: rgba(79, 70, 229, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.success {
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  color: #065f46;
+  padding: 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.03);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.error-box {
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  color: #991b1b;
+  padding: 14px 16px;
+  border-radius: 8px;
+  margin-bottom: 22px;
+  font-size: 14px;
+}
+
+/* Admin Styles */
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #334155;
+  border: 1px solid var(--border-color);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.02);
+}
+
+.btn-secondary:hover {
+  background: #f8fafc;
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: #ffffff;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01), 0 2px 4px -1px rgba(0, 0, 0, 0.005);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: middle;
+}
+
+th {
+  background: #f8fafc;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+}
+
+td {
+  color: #334155;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+.empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 48px 0;
+  font-size: 15px;
+}
+
+/* Animations for form transitions */
+.fade-in {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Overrides for react-phone-number-input */
+.PhoneInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.PhoneInputInput {
+  width: 100% !important;
+  padding: 12px 14px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  font-size: 15px !important;
+  color: var(--text-main) !important;
+  font-family: var(--font-sans) !important;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.PhoneInputInput:hover {
+  border-color: var(--border-hover) !important;
+  background: #ffffff !important;
+}
+
+.PhoneInputInput:focus {
+  outline: none !important;
+  border-color: var(--primary) !important;
+  background: #ffffff !important;
+  box-shadow: 0 0 0 3px var(--primary-light) !important;
+}
+
+.PhoneInput.invalid .PhoneInputInput {
+  border-color: var(--error) !important;
+  background: rgba(225, 29, 72, 0.01) !important;
+}
+
+.PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.PhoneInputCountrySelect {
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.PhoneInputCountrySelect:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.PhoneInputCountryIcon {
+  width: 24px;
+  height: 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+}
+
+/* Danger Button style (specifically used for visible logout buttons) */
+.btn-danger {
+  background: rgba(225, 29, 72, 0.05);
+  color: var(--error);
+  border: 1px solid var(--error-border);
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background: var(--error);
+  color: #ffffff;
+  border-color: var(--error);
+  box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-danger:active {
+  transform: translateY(0);
+}
+
+/* Custom Light Blue style for the Refresh button */
+.btn-refresh {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-refresh:hover:not(:disabled) {
+  background: #dbeafe;
+  border-color: #93c5fd;
+  color: #1e40af;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.08);
+  transform: translateY(-1px);
+}
+
+.btn-refresh:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.btn-refresh:disabled {
+  background: #f1f5f9;
+  color: #94a3b8;
+  border-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+/* Spinning keyframe animation for refresh button */
+.btn-refresh svg.spinning {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Password Input Wrapper & Toggle Eye Button */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  padding-right: 44px !important;
+}
+
+.password-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.password-toggle-btn:hover {
+  color: var(--text-main);
+  background-color: rgba(15, 23, 42, 0.05);
+}
