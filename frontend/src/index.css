@@ -47,7 +47,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Beautiful Soft Pastel Glowing Blobs */
 body::before,
 body::after {
   content: "";
@@ -114,7 +113,6 @@ h1 {
   background-clip: text;
 }
 
-/* Specific text gradient for the Junzle brand styling */
 .brand-gradient {
   background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
   -webkit-background-clip: text;
@@ -279,7 +277,6 @@ button {
   font-size: 14px;
 }
 
-/* Admin Styles */
 .admin-header {
   display: flex;
   align-items: center;
@@ -359,7 +356,6 @@ tbody tr:hover {
   font-size: 15px;
 }
 
-/* Animations for form transitions */
 .fade-in {
   animation: fadeIn 0.4s ease;
 }
@@ -369,7 +365,6 @@ tbody tr:hover {
   to { opacity: 1; }
 }
 
-/* Overrides for react-phone-number-input */
 .PhoneInput {
   display: flex;
   align-items: center;
@@ -436,7 +431,6 @@ tbody tr:hover {
   border-radius: 2px;
 }
 
-/* Danger Button style (specifically used for visible logout buttons) */
 .btn-danger {
   background: rgba(225, 29, 72, 0.05);
   color: var(--error);
@@ -464,7 +458,6 @@ tbody tr:hover {
   transform: translateY(0);
 }
 
-/* Custom Light Blue style for the Refresh button */
 .btn-refresh {
   background: #eff6ff;
   color: #1d4ed8;
@@ -499,7 +492,6 @@ tbody tr:hover {
   cursor: not-allowed;
 }
 
-/* Spinning keyframe animation for refresh button */
 .btn-refresh svg.spinning {
   animation: spin 1s linear infinite;
 }
@@ -513,7 +505,6 @@ tbody tr:hover {
   }
 }
 
-/* Password Input Wrapper & Toggle Eye Button */
 .password-input-wrapper {
   position: relative;
   display: flex;
