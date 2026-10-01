@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Junzle",
+    "slug": "junzle",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "primaryColor": "#1A56DB",
+    "splash": {
+      "backgroundColor": "#0D1B3E",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.junzle.app"
+    },
+    "android": {
+      "package": "com.junzle.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#1A56DB",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    }
+  }
+}

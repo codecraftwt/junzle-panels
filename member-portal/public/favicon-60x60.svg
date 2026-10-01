@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <rect width="60" height="60" rx="14" fill="#1A56DB"/>
+  <g transform="translate(10, 8) scale(0.12)">
+    <!-- Speed lines -->
+    <path d="M 10 290 L 90 290 L 76 308 L -4 308 Z" fill="#FFEF00" />
+    <path d="M 32 258 L 108 258 L 94 274 L 18 274 Z" fill="#FFFFFF" />
+    <!-- J Icon -->
+    <g transform="skewX(-13) translate(50, 0)">
+      <path d="M 105 40 L 235 40 L 225 80 L 182 80 L 165 150 L 135 150 L 147 110 L 147 80 L 105 80 Z" fill="#FFFFFF" />
+      <path d="M 182 80 L 225 80 L 207 146 L 165 146 Z" fill="#FFFFFF" />
+      <path d="M 156 178 L 198 178 L 186 216 C 180 244, 156 266, 120 266 C 80 266, 54 242, 60 206 L 98 206 C 95 220, 107 230, 122 230 C 137 230, 149 221, 152 206 Z" fill="#FFFFFF" />
+      <polygon points="160,140 214,140 178,176 208,176 150,244 168,184 144,184" fill="#FFEF00" />
+    </g>
+  </g>
+</svg>

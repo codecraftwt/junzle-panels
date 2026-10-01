@@ -1,0 +1,18 @@
+export const BRAND_COLORS = {
+  royalBlue: '#1A56DB',
+  canaryYellow: '#FFEF00',
+  darkNavy: '#0D1B3E',
+  white: '#FFFFFF',
+  navyLight: '#162A5A',
+  slate50: '#F8FAFC',
+  slate100: '#F1F5F9',
+  slate200: '#E2E8F0',
+  slate400: '#94A3B8',
+  slate600: '#475569',
+  slate800: '#1E293B',
+  slate900: '#0F172A',
+  success: '#10B981',
+  warning: '#F59E0B',
+  danger: '#EF4444',
+  info: '#3B82F6',
+};

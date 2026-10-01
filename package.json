@@ -1,13 +1,20 @@
 {
-  "name": "junzle-lead-magnet",
+  "name": "junzle-core-surfaces",
   "version": "1.0.0",
   "private": true,
-  "description": "JUNZLE Lead Magnet Form + Admin Panel",
+  "description": "Junzle Core Phase 1 Surfaces: Mobile App, Super Admin Panel, and Member Portal",
   "scripts": {
-    "install:all": "npm --prefix backend install && npm --prefix frontend install",
-    "dev:backend": "npm --prefix backend run dev",
-    "dev:frontend": "npm --prefix frontend run dev",
-    "build:frontend": "npm --prefix frontend run build",
-    "db:setup": "npm --prefix backend run prisma:migrate"
+    "dev:admin": "npm --prefix super-admin run dev",
+    "dev:portal": "npm --prefix member-portal run dev",
+    "dev:mobile": "npm --prefix mobile-app run web",
+    "dev:mobile:native": "npm --prefix mobile-app run start",
+    "dev:all": "concurrently -n \"ADMIN,PORTAL,MOBILE\" -c \"blue,yellow,magenta\" \"npm run dev:admin\" \"npm run dev:portal\" \"npm run dev:mobile\"",
+    "build:admin": "npm --prefix super-admin run build",
+    "build:portal": "npm --prefix member-portal run build",
+    "build:all": "npm run build:admin && npm run build:portal",
+    "install:all": "npm --prefix super-admin install && npm --prefix member-portal install && npm --prefix mobile-app install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Junzle — Brand Assets & Logo Spec Sheet</title>
+  <style>
+    :root {
+      --royal-blue: #1A56DB;
+      --canary-yellow: #FFEF00;
+      --dark-navy: #0D1B3E;
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-700: #334155;
+      --slate-900: #0F172A;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    body { background: #F8FAFC; color: #0F172A; padding: 40px 20px; line-height: 1.5; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    header { margin-bottom: 40px; border-bottom: 2px solid #E2E8F0; padding-bottom: 24px; }
+    h1 { font-size: 32px; font-weight: 800; color: #0D1B3E; }
+    p.lead { color: #64748B; font-size: 16px; margin-top: 6px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px; margin-bottom: 36px; }
+    .card { background: white; border-radius: 16px; border: 1px solid #E2E8F0; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+    .card-header { padding: 16px 20px; border-bottom: 1px solid #E2E8F0; background: #F8FAFC; display: flex; justify-content: space-between; align-items: center; }
+    .card-title { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: #475569; }
+    .card-body { padding: 32px; display: flex; justify-content: center; align-items: center; min-height: 160px; }
+    .card-body.dark { background: #0D1B3E; }
+    .card-body.white { background: #FFFFFF; }
+    .card-body.blue { background: #1A56DB; }
+    .palette-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 40px; }
+    .color-swatch { border-radius: 12px; overflow: hidden; border: 1px solid #E2E8F0; background: white; }
+    .swatch-fill { height: 90px; }
+    .swatch-info { padding: 12px; }
+    .swatch-name { font-weight: 700; font-size: 14px; }
+    .swatch-hex { font-family: monospace; font-size: 13px; color: #64748B; margin-top: 4px; }
+    .icon-test-row { display: flex; gap: 32px; align-items: flex-end; justify-content: center; padding: 24px 0; }
+    .icon-test-col { text-align: center; }
+    .icon-label { font-size: 12px; color: #64748B; font-weight: 600; margin-top: 8px; }
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 700; }
+    .badge-approved { background: #DCFCE7; color: #166534; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <div>
+          <h1>Junzle Brand Identity System</h1>
+          <p class="lead">Revised Logo Assets, Color Tokens, and Multi-Scale Icons</p>
+        </div>
+        <span class="badge badge-approved">Phase 1 Specs Verified</span>
+      </div>
+    </header>
+
+    <!-- Color Palette -->
+    <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: #0D1B3E;">Brand Colors</h2>
+    <div class="palette-grid">
+      <div class="color-swatch">
+        <div class="swatch-fill" style="background: #1A56DB;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Royal Blue (Primary)</div>
+          <div class="swatch-hex">#1A56DB</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-fill" style="background: #FFEF00;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Canary Yellow (Accent)</div>
+          <div class="swatch-hex">#FFEF00</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-fill" style="background: #0D1B3E;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Dark Navy</div>
+          <div class="swatch-hex">#0D1B3E</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-fill" style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">White Background</div>
+          <div class="swatch-hex">#FFFFFF</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wordmark & Logo Variations -->
+    <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: #0D1B3E;">Primary Logo Variations (Single J + Negative Space Lightning Bolt)</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Light Background Version</span>
+          <span style="font-size: 12px; color: #64748B;">logo-white-bg.svg</span>
+        </div>
+        <div class="card-body white">
+          <img src="logo-white-bg.svg" alt="Junzle Logo Light" style="max-width: 100%; height: 75px;">
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Dark Navy (#0D1B3E) Background Version</span>
+          <span style="font-size: 12px; color: #94A3B8;">logo-dark-navy-bg.svg</span>
+        </div>
+        <div class="card-body dark">
+          <img src="logo-dark-navy-bg.svg" alt="Junzle Logo Dark Navy" style="max-width: 100%; height: 75px;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Standalone App Icons & Favicons -->
+    <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 16px; color: #0D1B3E;">App Icon & Favicon Scale Verification</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Royal Blue Background Icon</span>
+          <span style="font-size: 12px; color: #64748B;">app-icon-blue.svg</span>
+        </div>
+        <div class="card-body">
+          <div class="icon-test-row">
+            <div class="icon-test-col">
+              <img src="app-icon-blue.svg" alt="120px" width="120" height="120" style="display:block; border-radius: 28px;">
+              <div class="icon-label">120 × 120 px</div>
+            </div>
+            <div class="icon-test-col">
+              <img src="favicon-60x60.svg" alt="60px" width="60" height="60" style="display:block; border-radius: 14px;">
+              <div class="icon-label">60 × 60 px</div>
+            </div>
+            <div class="icon-test-col">
+              <img src="favicon-60x60.svg" alt="32px" width="32" height="32" style="display:block; border-radius: 8px;">
+              <div class="icon-label">32 × 32 px (Favicon)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">White Background Icon</span>
+          <span style="font-size: 12px; color: #64748B;">app-icon-white.svg</span>
+        </div>
+        <div class="card-body">
+          <div class="icon-test-row">
+            <div class="icon-test-col">
+              <img src="app-icon-white.svg" alt="120px" width="120" height="120" style="display:block; border-radius: 28px;">
+              <div class="icon-label">120 × 120 px</div>
+            </div>
+            <div class="icon-test-col">
+              <img src="app-icon-white.svg" alt="60px" width="60" height="60" style="display:block; border-radius: 14px;">
+              <div class="icon-label">60 × 60 px</div>
+            </div>
+            <div class="icon-test-col">
+              <img src="app-icon-white.svg" alt="32px" width="32" height="32" style="display:block; border-radius: 8px;">
+              <div class="icon-label">32 × 32 px</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

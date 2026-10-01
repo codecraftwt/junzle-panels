@@ -1,0 +1,1017 @@
+/* =========================================================================
+   JUNZLE MEMBER PORTAL — AUTH & ONBOARDING WEB FLOW STYLES
+   Web-portal typography, exact color tokens, desktop & tablet responsive
+   ========================================================================= */
+
+/* ── Global Font Classes ── */
+.font-rethink {
+  font-family: 'Rethink Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ── Auth Web Navbar ── */
+.authWebNavbar {
+  height: 64px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.authWebNavLeft {
+  width: 140px;
+  display: flex;
+  align-items: center;
+}
+
+.authWebBackBtn {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.authWebBackBtn:hover {
+  background-color: #F8FAFC;
+  border-color: #CBD5E1;
+  transform: translateX(-1px);
+}
+
+.authWebNavCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authWebNavLogo {
+  height: 32px;
+  object-fit: contain;
+}
+
+.authWebNavRight {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.authWebNavBadges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Screen Heading Component ── */
+.screenHeadingBlock {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.screenHeadingBlock--centered {
+  text-align: center;
+  align-items: center;
+}
+
+.screenHeadingTitle {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: -0.2px;
+  color: #0D1B3E;
+}
+
+.screenHeadingSubtitle {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.15px;
+  color: #52627A;
+}
+
+/* ── Web Portal Auth Page Layout ── */
+.authWebPage {
+  min-height: 100vh;
+  background-color: #F8FAFC;
+  display: flex;
+  flex-direction: column;
+}
+
+.authWebContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px 60px;
+}
+
+.authWebCard {
+  width: 100%;
+  max-width: 460px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 10px 30px -5px rgba(13, 27, 62, 0.08);
+  padding: 36px 32px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.authWebCard--wide {
+  max-width: 600px;
+}
+
+.authWebCard--extraWide {
+  max-width: 860px;
+}
+
+/* ── Form Controls ── */
+.authFormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.authFormLabel {
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0D1B3E;
+}
+
+.authInput {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 0 14px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #0D1B3E;
+  background-color: #FFFFFF;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  box-sizing: border-box;
+}
+
+.authInput:focus {
+  border-color: #2B7FFF;
+  box-shadow: 0 0 0 3px rgba(43, 127, 255, 0.12);
+}
+
+.authInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.authInputWrapper .authInput {
+  padding-right: 44px;
+}
+
+.authEyeToggleBtn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  color: #64748B;
+  transition: color 0.15s ease;
+}
+
+.authEyeToggleBtn:hover {
+  color: #0D1B3E;
+}
+
+.authForgotLink {
+  align-self: flex-end;
+  margin-top: 4px;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2B7FFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.authForgotLink:hover {
+  text-decoration: underline;
+}
+
+/* ── Phone Input with Country Code ── */
+.authPhoneRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.authCountryCode {
+  height: 48px;
+  padding: 0 12px;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.authFlagEmoji {
+  font-size: 18px;
+}
+
+.authDialCode {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0D1B3E;
+}
+
+/* ── Primary Action Buttons ── */
+.authPrimaryBtn {
+  width: 100%;
+  height: 52px;
+  border-radius: 12px;
+  background-color: #2B7FFF;
+  color: #FFFFFF;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(43, 127, 255, 0.25);
+  transition: all 0.2s ease;
+  margin-top: 8px;
+  box-sizing: border-box;
+}
+
+.authPrimaryBtn:hover {
+  background-color: #1A56DB;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(43, 127, 255, 0.35);
+}
+
+.authPrimaryBtn:active {
+  transform: translateY(0);
+}
+
+.authPrimaryBtnIcon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* ── Footer Link Rows ── */
+.authFooterRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.authFooterLink {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #2B7FFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.authFooterLink:hover {
+  text-decoration: underline;
+}
+
+/* ── 6-Digit OTP Code Inputs ── */
+.otpCodeContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.otpCodeBox {
+  flex: 1;
+  height: 60px;
+  max-width: 60px;
+  border-radius: 12px;
+  border: 1.5px solid #E2E8F0;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.otpCodeBox--filled {
+  border-color: #2B7FFF;
+  box-shadow: 0 0 0 2px rgba(43, 127, 255, 0.15);
+}
+
+.otpCodeInput {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #0D1B3E;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.otpResendRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #64748B;
+  margin-bottom: 20px;
+}
+
+.otpTimerText {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  color: #2B7FFF;
+}
+
+.otpResendLink {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  color: #2B7FFF;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ── Verified / Success Badge Center Block ── */
+.authSuccessBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
+.authVerifiedBadge {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  margin-bottom: 24px;
+  animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ── Splash Screen (Web Portal Native) ── */
+.splashPage {
+  min-height: 100vh;
+  background-color: #1A56DB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+}
+
+.splashRippleRing {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  animation: pulseRing 3s ease-out infinite;
+}
+
+.splashRippleRing--1 {
+  width: 280px;
+  height: 280px;
+}
+
+.splashRippleRing--2 {
+  width: 360px;
+  height: 360px;
+  animation-delay: 0.8s;
+}
+
+@keyframes pulseRing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+.splashContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.splashLogo {
+  width: 320px;
+  max-width: 90vw;
+  height: auto;
+  object-fit: contain;
+}
+
+.splashTagline {
+  margin-top: 18px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.8px;
+  text-align: center;
+}
+
+.splashProgressBar {
+  margin-top: 40px;
+  width: 140px;
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.splashProgressFill {
+  height: 100%;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  animation: loadFill 2.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loadFill {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
+.splashSkipBtn {
+  margin-top: 24px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 6px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.splashSkipBtn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+/* ── Web Portal Welcome Page ── */
+.welcomeWebPage {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1A56DB 0%, #0F3BA0 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+.welcomeWebNav {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.welcomeWebGrid {
+  flex: 1;
+  max-width: 1180px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 56px;
+  align-items: center;
+}
+
+.welcomeHeroCol {
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.welcomeLogoLarge {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.welcomeHeroHeading {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 58px;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+
+.welcomeHeroSub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 500px;
+}
+
+.welcomeFeatureList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.welcomeFeatureItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.welcomeFeatureDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFEF00;
+}
+
+/* Welcome Action Card on Web */
+.welcomeActionCard {
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 20px 45px rgba(13, 27, 62, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.welcomeCardOption {
+  width: 100%;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #E9EDF3;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.welcomeCardOption:hover {
+  border-color: #2B7FFF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(43, 127, 255, 0.1);
+}
+
+.welcomeCardOptionTitle {
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0D1B3E;
+  margin-bottom: 2px;
+}
+
+.welcomeCardOptionSub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #6B7280;
+}
+
+.welcomeOrRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 6px 0;
+}
+
+.welcomeOrLine {
+  flex: 1;
+  height: 1px;
+  background-color: #E9EDF3;
+}
+
+.welcomeOrText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9CA3AF;
+  letter-spacing: 0.5px;
+}
+
+.welcomeSignUpBtn {
+  width: 100%;
+  height: 52px;
+  border-radius: 16px;
+  border: 1.5px solid #E2E8F0;
+  background-color: #FFFFFF;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #0D1B3E;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcomeSignUpBtn:hover {
+  border-color: #CBD5E1;
+  background-color: #F8FAFC;
+}
+
+.welcomeLoginRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  color: #6B7280;
+}
+
+.welcomeLoginLink {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2B7FFF;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.welcomeLoginLink:hover {
+  text-decoration: underline;
+}
+
+/* ── What Would You Like To Do Web Screen ── */
+.actionChoiceGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.actionChoiceCard {
+  width: 100%;
+  padding: 18px 20px;
+  border-radius: 16px;
+  border: 1px solid #D9E0EA;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.actionChoiceCard:hover {
+  border-color: #2B7FFF;
+  box-shadow: 0 6px 20px rgba(43, 127, 255, 0.12);
+  transform: translateY(-2px);
+}
+
+.actionChoiceTitle {
+  font-family: 'Rethink Sans', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: #0D1B3E;
+  margin-bottom: 4px;
+}
+
+.actionChoiceSub {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 13.5px;
+  line-height: 20px;
+  color: #52627A;
+}
+
+/* ── Team Created Success Web Screen ── */
+.teamCreatedQrWrap {
+  width: 180px;
+  height: 180px;
+  margin: 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-radius: 16px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.teamCreatedQrImg {
+  width: 156px;
+  height: 156px;
+  object-fit: contain;
+}
+
+.downloadQrBtn {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid #2B7FFF;
+  background-color: #FFFFFF;
+  color: #2B7FFF;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 20px;
+}
+
+.downloadQrBtn:hover {
+  background-color: #EFF6FF;
+}
+
+.inviteSection {
+  margin-bottom: 20px;
+}
+
+.inviteSectionLabel {
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0D1B3E;
+  margin-bottom: 8px;
+}
+
+.inviteLinkBox {
+  width: 100%;
+  height: 46px;
+  border-radius: 10px;
+  border: 1px solid #E9EDF3;
+  background-color: #F8FAFC;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.inviteLinkText {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 14px;
+  color: #0D1B3E;
+  font-weight: 500;
+}
+
+.copiedBadge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1DA35E;
+  margin-top: 4px;
+}
+
+.inviteOptionsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inviteOptionCard {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #E9EDF3;
+  background-color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.inviteOptionCard:hover {
+  border-color: #2B7FFF;
+  background-color: #F8FAFC;
+}
+
+/* ── Find Team Flow Web Styles ── */
+.findTeamTabs {
+  display: flex;
+  border-bottom: 1px solid #E2E8F0;
+  margin-bottom: 20px;
+}
+
+.findTeamTabBtn {
+  flex: 1;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: 'Rethink Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #64748B;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.findTeamTabBtn--active {
+  color: #015CFE;
+  border-bottom-color: #015CFE;
+}
+
+.recentTeamCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  background-color: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  margin-bottom: 8px;
+}
+
+.recentTeamCard--selected {
+  border-color: #015CFE;
+  background-color: #F0F6FF;
+}
+
+.teamAvatarCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.teamAvatarImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* QR Camera Scanner Viewfinder */
+.viewfinderFrame {
+  width: 100%;
+  height: 320px;
+  background-color: #0F172A;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0;
+}
+
+.viewfinderLaser {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background-color: #2B7FFF;
+  box-shadow: 0 0 8px #2B7FFF;
+  animation: laserScan 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes laserScan {
+  0% { top: 25%; }
+  100% { top: 75%; }
+}
+
+.viewfinderTarget {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.viewfinderCorner {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-color: #FFFFFF;
+}
+
+.viewfinderCorner--tl { top: 0; left: 0; border-top: 3px solid #FFFFFF; border-left: 3px solid #FFFFFF; border-top-left-radius: 6px; }
+.viewfinderCorner--tr { top: 0; right: 0; border-top: 3px solid #FFFFFF; border-right: 3px solid #FFFFFF; border-top-right-radius: 6px; }
+.viewfinderCorner--bl { bottom: 0; left: 0; border-bottom: 3px solid #FFFFFF; border-left: 3px solid #FFFFFF; border-bottom-left-radius: 6px; }
+.viewfinderCorner--br { bottom: 0; right: 0; border-bottom: 3px solid #FFFFFF; border-right: 3px solid #FFFFFF; border-bottom-right-radius: 6px; }
+
+/* ── Responsive Rules ── */
+@media (max-width: 900px) {
+  .welcomeWebGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .welcomeHeroHeading {
+    font-size: 38px;
+    line-height: 44px;
+  }
+}
+
+@media (max-width: 600px) {
+  .authWebCard {
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+  .authWebNavbar {
+    padding: 0 16px;
+  }
+}
